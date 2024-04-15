@@ -2,14 +2,18 @@
   "name": "complex-backend-project",
   "version": "1.0.0",
   "description": "this project best of backend developer",
+  "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.js"
   },
   "keywords": [
     "javascript",
     "backend"
   ],
   "author": "Muhammad Inam",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
