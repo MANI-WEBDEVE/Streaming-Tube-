@@ -1,10 +1,14 @@
 const asyncHandler = (requestHandler) => {
-     (req, res, next) => {
-        Promise.resolve(requestHandler(req,res,nect)).catch((err)=> next(err))
+     return (req, res, next) => {
+        Promise.resolve(requestHandler(req,res,next)).catch((err)=> next(err))
      }
 };
 
 export { asyncHandler };
+
+
+
+
 
 //! let`s check higher order function siple is that function inside function
 
