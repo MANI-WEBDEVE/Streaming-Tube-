@@ -19,6 +19,28 @@ connectDB()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //* Professional approche connect DATA BASE
 
 //* IIFE use connect Data Base
@@ -42,6 +64,6 @@ const app = express()
     } catch (error) {
         console.error('Error:' , error);
         throw error
-    }
+    } 
 })()
 */
