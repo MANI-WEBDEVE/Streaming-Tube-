@@ -1,13 +1,41 @@
-import crypto from 'crypto'
+import mongoose, { Schema } from "mongoose";
 
-import dotenv from 'dotenv/config'
+import jwt from "jsonwebtoken";
 
-// Generate a random buffer of 32 bytes (256 bits)
-const secret = crypto.randomBytes(32).toString('hex');
-
-console.log("ACCESS_TOKEN_SECRET:", secret);
-
-console.log(process.env.MONGODB_URI)
+import bcrypt from "bcrypt";
 
 
-console.log(dotenv)
+//* Password ko hash form ma covert ka Method
+
+// userSchema.pre("save", async function (next) {
+//     if (!this.isModified(this.password)) return next();
+
+//     this.password = bcrypt.hash(this.password, 10);
+//     next();
+// });
+
+//* Password ko hash form ko hash form ma covert karna
+
+// userSchema.method.isPasswordCorrect = async function (password) {
+//     return await bcrypt.compare(password, this.password);
+// };
+
+//* Generate a ACCESS TOKEN
+console.log(process.env.ACCESS_TOKEN_EXPIRY)
+
+
+    let a = jwt.sign(
+        {
+            //! pass the Payload
+            _id: '12121212121212121323',
+            username: 'Inamkhan',
+            fullName: 'MuhammadInamKhan',
+            email: "inam@gmail.com",
+        },
+        'inamasdasd',
+        {
+            expiresIn: '7d',
+        }
+    );
+    console.log(a)
+

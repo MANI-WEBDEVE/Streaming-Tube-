@@ -62,7 +62,7 @@ userSchema.pre("save", async function (next) {
     next();
 });
 
-//* Password ko hash form sa correct form ma covert and check method
+//* Password ko hash form ko hash form ma covert karna
 
 userSchema.method.isPasswordCorrect = async function (password) {
     return await bcrypt.compare(password, this.password);

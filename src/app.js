@@ -15,7 +15,7 @@ app.use(cors(
 ))
 app.use(express.json({limit:'16kb'})) //* ---> ya line json ko read kara ke or 16kb sa zada ka data nahi ayega 
 
-app.use(express.urlencoded({extended: true, limit:'16kb'})) //* ---> ya  line URL ka Data ko encoded kata ha
+app.use(express.urlencoded({extended: true, limit:'16kb'})) //* ---> ya  line URL ka Data ko read format ma covert karta ha
 
 app.use(cookieParser()) //* ---> ya line cookie-Parser ko config kar rahe ha 
 
